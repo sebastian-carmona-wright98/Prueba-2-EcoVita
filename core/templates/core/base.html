@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eccovita</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/Estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/Slinder.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style_scroll.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style_rodo.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style_form.css' %}">    
+    <link rel="stylesheet" href="{% static 'core/css/Responsive.css' %}">
+    <link rel="stylesheet" href="Servicio.html">
+    <link rel="stylesheet" href="Inicio.html">
+
+    <script type="text/javascript" src="{% static 'core/js/backtotop.js' %}"></script>
+    <script type="text/javascript" src="{% static 'core/js/jquery-3.4.1.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'core/js/validar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'core/js/Menu.js' %}"></script>
+    
+
+    <link rel="icon" href="{% static 'core/imagenes/icon1.png' %}">
+    <!-- <link rel="stylesheet" href="css/Responsive.css">  -->
+    <link rel="stylesheet" href="Proyecto EccoVita.html">
+    <link rel="stylesheet" href="formularioEccovita.html">
+    
+    <!-- Compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!-- Minified JS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <!-- icono de la pagina menu de carga en ECCOVIA -->
+
+    
+        
+</head>
+<!-- punto de partida xd -->
+<!-- ajustar tamaño de la pagina en vista -->
+
+<div class="row">
+   <div class="col-xs-12"
+               col-sm-8
+               col-md-6
+               col-lg-4>
+        <div class="box"></div>
+   </div>
+</div> 
+<!-- generando el menu de la pagina con sus opciones inicio, servicio y contacto -->
+
+<header>
+
+    <div class="ancho">
+        <div class="logo"> 
+        <p><a href="{% url 'home' %}">ECCOVITA</a></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'servicio' %}">Servicio</a></li>
+                <li><a href="{% url 'formulario' %}">Contactos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- imagenes en el contenedor o carusell de la pagina -->
+
+{% block contenido %}
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{% static 'core/imagenes/1.jpg' %}" alt="">
+                    <div class="carousel-caption">
+                        <h1>EL MUNDO</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'core/imagenes/2.jpg' %}" alt="">
+                    <div class="carousel-caption">
+                         <h1>LO PODEMOS</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'core/imagenes/3.jpg' %}" alt="">
+                    <div class="carousel-caption">
+                          <h1>SALVAR</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'core/imagenes/4.jpg' %}" alt="">
+                    <div class="carousel-caption">
+                          <h1>SALVAR</h1>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'core/imagenes/5.jpg' %}" alt="">
+                    <div class="carousel-caption">
+                          <h1>SALVAR</h1>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+<br>
+<br>
+<br>
+<!-- opcion de la pagina de escritura de slinder(es una barrita oscura que tiene al interior letras para dar informacion) -->
+
+
+<!-- clase de introduccion de la pagina en cual tiene como mision darle la bienvenida al usuario -->
+
+<section class="titul">
+    <section class="bienvenidos">
+    <br>
+    <br>    
+    <h2>Acerca De Eccovita</h2>
+    <h3>Queremos formar una red de empresas interesadas en reciclar productos para darle una segunda vida y evita el tanto daño que hacen a nuestro medio ambiente. Estamos reuninendo fondos para fabricar máquinas que nos permitan reciclar desechos que nosotros mismos generamos o conseguimos en la cadena de producción de sub productos.</h3>
+    </section>
+</section>
+
+<br>
+<br>
+<br>
+<!-- clase para generar informacion de la pagina por imagen y parrafo para generar una mejor informacion al sitio -->
+
+<section class="contenedor-columnas">
+     <div class="columnasx1">
+         <img src="{% static 'core/imagenes/9.jfif' %}" alt="">
+         <h4>ECOLOGÍA</h4>
+         <br>
+         <h5>REDUCIR:</h5>
+         <br>
+         <p class="p1">Una buena manera de colaborar con el cuidado del medio ambiente es reducir la cantidad de residuos que producimos. <strong>¿Cómo hacerlo?</strong> Comprar botellas de vidrio en lugar de latas, productos con la menor cantidad de embalaje, pilas recargables, usar un limpiador "multi-usos" o incluso hacer nuestros propios limpiadores con productos naturales y que solemos tener en nuestra cocina y muy importante reducir la cantidad de plástico que usamos.</p>
+         <br><br>
+     </div>
+     <div class="columnasx1">
+        <img src="{% static 'core/imagenes/8.jpg' %}" alt="">
+        <h4>MEDIO AMBIENTE</h4>
+        <br>
+        <h5>REUTILIZAR:</h5>
+        <br>
+        <p class="p1">En muchas ocasiones desechamos productos que todavía pueden resultar útiles. Podemos donarlos, así que otras personas puedan <strong>reutilizarlos</strong> para darles una nueva utilidad. También podemos comprar adquirir productos en las tiendas de segunda mano.</p>
+        <br><br>
+    </div>
+    <div class="columnasx1">
+        <img src="{% static 'core/imagenes/11.jpg' %}" alt="">
+        <br>
+        <br>
+        <h4>RECICLAJE</h4>
+        <br>
+        <h5>RECICLAR:</h5>
+        <br>
+        <p class="p1">Y por último cuando ya el producto no tiene más vida debemos <strong>reciclarlo</strong>. No podemos arrojar a la basura sin más. Existen eco parques dónde podemos llevar aquellos residuos que no deben ser tirados al cubo de la basura por se altamente contaminantes.</p>
+        <br><br>
+    </div>
+</section>
+<br>
+<br>
+
+
+<!-- banner de la pagina con parrafos y enlaces de ayuda en el sitio -->
+<section class="banner-1">
+
+    <h3>Para seguirnos con nuestro trabajo en ayudar a reciclar<a href="{% url 'formulario' %}">Enlace A Contacto</a></h3>
+
+</section>
+<body>
+        <a href="#" id="back-to-top" title="Back to top">&uarr;</a>   
+</body>
+
+{% endblock contenido %}
+
+</html>

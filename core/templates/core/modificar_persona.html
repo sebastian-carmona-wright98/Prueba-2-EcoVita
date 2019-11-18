@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+{% load static %}
+<body>
+        <h1>CONTÁCTANOS</h1>
+        <!-- Creación del formulario  -->
+		<form action="" id="formulario" method="POST">
+            {% csrf_token %}
+
+            <input type="hidden" name="txtId" id="txtId" value="{{ persona.id }}">
+
+            <h2 class="form-titulo">Modificar</h2>
+            <div class="contenedor-inputs">
+            <input action="" type="text" id="Nombre" name="nombre" placeholder="Nombre Completo" value="{{ persona.nombre }}" class="input-100" required>
+            <label for="" class="labeltext">Nombre Completo</label>
+            <input action="" type="text" id="Direccion" name="direccion" placeholder="Dirección (opcional)" value="{{ persona.direccion }}" class="input-100">
+            <label for="" class="labeltext">Dirección (opcional)</label>
+            <input action="" type="text" id="Telefono" name="Telefono" placeholder="Teléfono" value="{{ persona.telefono }}" class="input-48">
+            <label for="" class="labeltext">Teléfono</label>
+            <input action="" type="email" id="Mail"  name="correo" placeholder="Correo Electrónico" value="{{ persona.mail }}" class="input-48-2"required>
+            <label for="" class="labelmail">Correo Electrónico</label>
+            <input action="" type="text" id="Asunto" name="asunto" placeholder="Asunto" value="{{ persona.asunto }}" class="input-100"required>
+            <label for="" class="labeltext">Asunto</label>
+            <textarea action="" name="texto" id="Mensaje" rows="5" cols="20" placeholder="Mensaje" value="{{ persona.mensaje }}" class="input-1" required></textarea>
+            <label for="" class="labelmessage">Mensaje</label>
+            
+            <input type="submit" value="Modificar" class="btnEnviar" onClick="validarForm()">
+            <input type="reset" value="Limpiar" class="btnBorrar">          
+            <div id="content"></div>
+            <!-- SCROLL  -->
+            <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+        </form> 
+        <h2>{{ mensaje }}</h2>
+        <!-- Finalmente se crea el FOOTER para agregar un mensaje de al pie de página -->
+        <div class="footer">
+            <p> &copy; 2019 Eccovita Corp. All Rights Reserved | Llámenos al +56224066000 <b>SÓLO EMERGENCIAS</b></p>
+        </div>
+        <!-- Se llama a labform.js, este documento de JS llama al metodo fijar, para que el formulario sea dinámico-->
+        <script type="text/javascript" src="js/labform.js"></script>			
+	</body>
+
+{% endblock contenido %}

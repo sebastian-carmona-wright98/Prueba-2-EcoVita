@@ -1,0 +1,4 @@
+/* para agregar estilo a la pagina con las letras de slinder(efecto) */
+#particles-js{
+    background: url(naturaleza.gif);
+}

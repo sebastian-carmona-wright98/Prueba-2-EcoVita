@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+{% load static %}
+<h1>CONTÁCTANOS</h1>
+        <!-- Creación del formulario  -->
+<form action="" id="formulario" method="POST">
+    {% csrf_token %}
+            
+            <label for="">Nombres</label>
+            <input type="text" id="txtNombre" name="txtnombre">
+            <br>
+            <label for="">Direccion</label>
+            <input type="text" id="txtDireccion" name="txtdireccion">
+            <br>
+            <label for="">Telefono</label>
+            <input type="text" id="txtTelefono" name="txttelefono">
+            <br>
+            <label for="">Email</label>
+            <input type="email" id="Mail"  name="correo">
+            <br>
+            <label for="">Aunto</label>
+            <input type="text" id="txtAsunto" name="txtasunto">
+            <br>
+            <label for="">Mensaje</label>
+            <input type="text" id="txtMensaje" name="txtmensaje">
+            <br>
+            
+            <input type="submit" value="Enviar" class="btnEnviar" onClick="validarForm()">
+            <input type="reset" value="Limpiar" class="btnBorrar">          
+            <div id="content"></div>
+            <!-- SCROLL  -->
+            <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+        </form> 
+        <h2>{{ mensaje }}</h2>
+        <!-- Finalmente se crea el FOOTER para agregar un mensaje de al pie de página -->
+        <div class="footer">
+            <p> &copy; 2019 Eccovita Corp. All Rights Reserved | Llámenos al +56224066000 <b>SÓLO EMERGENCIAS</b></p>
+        </div>
+        <!-- Se llama a labform.js, este documento de JS llama al metodo fijar, para que el formulario sea dinámico-->
+        			
+	
+
+{% endblock contenido %}
+
